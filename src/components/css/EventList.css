@@ -1,0 +1,66 @@
+.eventBox {
+  width: 500px;
+  height: 850px;
+  border: 1px solid #dbdbdb;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  box-sizing: border-box;
+}
+.eventBox hr {
+  background: #dbdbdb;
+  height: 1px;
+  border: 0;
+  box-sizing: border-box;
+}
+.eventBoxHeader h2 {
+  margin: 20px;
+}
+
+.eventBoxHeader {
+  height: 100px;
+  box-sizing: border-box;
+  align-items: center;
+  line-height: 100px;
+
+  /* background-color: blue; */
+  margin-left: 40px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.eventBoxList {
+  height: 600px;
+  background-color: aliceblue;
+  margin: 20px;
+}
+.eventBoxFooter {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+
+  margin-right: 30px;
+}
+.eventBoxFooter-input {
+  border-radius: 30px;
+  border: 3px solid #dbdbdb;
+  margin-left: 10px;
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+}
+.eventBoxListAdd {
+  border-radius: 15px;
+  height: 50px;
+  width: 50px;
+  margin-top: 14px;
+  margin-left: 10px;
+  background-color: #c5ffab;
+  border: none;
+  font-size: 40px;
+}
+.eventBoxListAdd:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}

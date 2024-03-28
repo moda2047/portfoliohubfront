@@ -1,0 +1,23 @@
+.calendarM {
+  /* background-color: #dbdbdb; */
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.calendar-main {
+  /*  background-color: red; */
+}
+
+.calendar-header {
+  background-color: white;
+  height: 100px;
+  align-items: center;
+}
+.calendar-body {
+  /* background-color: blue; */
+}
+.calendar-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
