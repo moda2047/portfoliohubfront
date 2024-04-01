@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "../css/EventList.css";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import { useNavigate } from "react-router-dom";
-const EventList = () => {
+
+export const EventList = () => {
   const navigate = useNavigate();
   const handleMoveAdd = () => {
     navigate("./eventadd");

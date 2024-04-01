@@ -22,6 +22,11 @@ html {
   height: 100%;
   display: flex;
   margin-top: 30px;
+  position: relative;
+  align-items: center;
+}
+
+.eventAddBoxBodyRow.align-center {
   align-items: center;
 }
 
@@ -121,4 +126,12 @@ html {
 .eventAddBoxFooter-button:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.calendarOverlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  margin-left: 30%;
 }

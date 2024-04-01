@@ -75,6 +75,7 @@ const PTCalendar = () => {
           src="./images/Back.png"
           alt="back"
           onClick={goToPreviousMonth}
+          className="moveimghover"
         ></img>
 
         <h2>
@@ -87,6 +88,7 @@ const PTCalendar = () => {
           src="./images/Forward.png"
           alt="forward"
           onClick={goToNextMonth}
+          className="moveimghover"
         ></img>
       </div>
       <table>
