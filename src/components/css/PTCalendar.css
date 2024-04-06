@@ -44,3 +44,6 @@
   opacity: 0.7;
   cursor: pointer;
 }
+.calendar tbody tr {
+  height: calc(100% / 6); /* 행의 높이를 동일하게 설정 (6은 행의 개수입니다) */
+}

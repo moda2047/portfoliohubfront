@@ -3,10 +3,11 @@ import "../css/EventAdd.css";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const EventAdd = () => {
+  const navigate = useNavigate();
   // 날짜를 "YYYY-MM-DD" 형식의 문자열로 변환하는 함수
   const formatDate = (date) => {
     const year = date.getFullYear();
@@ -51,21 +52,13 @@ const EventAdd = () => {
         headers: headers,
       })
       .then((response) => {
-        console.log("여기까지는 들어옴");
-        if (response.data.result) {
-          window.alert("일정이 추가되었습니다.");
-          console.log(response.data.message);
-          Navigate("/");
-        } else {
-          console.log(response.data.message);
-          window.alert(response.data.message);
-        }
+        window.alert("일정이 추가되었습니다.");
+        console.log(response.data.message);
+        navigate("/");
       })
       .catch((error) => {
         window.alert("일정 추가 중 오류가 발생했습니다.");
         console.error("일정 추가 중 오류가 발생했습니다.", error);
-        console.log(data);
-        console.log(headers);
       });
   };
   return (
