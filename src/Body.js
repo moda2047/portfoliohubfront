@@ -19,6 +19,7 @@ import EventAdd from "./components/event/EventAdd";
 import EventDetail from "./components/event/EventDetail";
 import EventListRow from "./components/event/EventListRow";
 import Header from "./components/Header";
+import EventUpdate from "./components/event/EventUpdate";
 
 const Body = () => {
   return (
@@ -36,6 +37,7 @@ const Body = () => {
       <Route path="/eventadd" element={<EventAdd />}></Route>
       <Route path="/eventdetail" element={<EventDetail />}></Route>
       <Route path="/eventlistrow" element={<EventListRow />}></Route>
+      <Route path="/eventupdate" element={<EventUpdate />}></Route>
     </Routes>
   );
 };

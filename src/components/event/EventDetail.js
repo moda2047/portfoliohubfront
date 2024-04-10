@@ -81,6 +81,9 @@ const EventDetail = () => {
         console.error("오류 : ", error);
       });
   };
+  const updateEvent = () => {
+    navigate(`/eventupdate`, { state: { eventId: eventDetail.id } });
+  };
   return (
     <>
       <div className="eventDetailBox">
@@ -123,7 +126,7 @@ const EventDetail = () => {
         </div>
         <hr />
         <div className="eventDetailBoxFooter">
-          <div className="eventDetailBoxFooter-icon">
+          <div className="eventDetailBoxFooter-icon" onClick={updateEvent}>
             <img src="./images/edit.png" alt="수정 아이콘" />
             <div className="click">수정</div>
           </div>
