@@ -3,16 +3,16 @@ import "../css/CalendarCell.css";
 
 const CalendarCell = ({ day, events, onClick }) => {
   return (
-    <td onClick={() => onClick(day)}>
-      {day}
+    <td className="cellTd" onClick={() => onClick(day)}>
+      <div className="dayLabel">{day}</div>
       {events && events.length > 0 && (
-        <ul className="calendarcellul">
+        <div className="calenarcellul">
           {events.map((event, index) => (
-            <li className="calendarcellli" key={index}>
-              {event.title}
-            </li>
+            <div key={index}>
+              <div className="calendarcellli">{event.title}</div>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </td>
   );

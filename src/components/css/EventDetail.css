@@ -7,7 +7,7 @@ html {
     font-family: "Inter var", sans-serif;
   }
 }
-.eventAddBox {
+.eventDetailBox {
   width: 800px;
   height: 600px;
   margin: 0 auto;
@@ -15,11 +15,11 @@ html {
   border-radius: 30px;
   margin-top: 10px;
 }
-.eventAddBoxBody {
+.eventDetailBoxBody {
   /* background-color: ; */
 }
 
-.eventAddBoxBodyRow {
+.eventDetailBoxBodyRow {
   height: 100%;
   display: flex;
   margin-top: 1%;
@@ -27,11 +27,11 @@ html {
   align-items: center;
 }
 
-.eventAddBoxBodyRow.align-center {
+.eventDetailBoxBody.align-center {
   align-items: center;
 }
 
-.eventAddBoxBodyRow-span {
+.eventDetailBoxBody-span {
   width: 200px;
   height: 50px;
   font-size: 20px;
@@ -41,25 +41,27 @@ html {
   justify-content: center;
 }
 
-.eventAddBoxBodyRow-input {
+.eventDetailBoxBody-input {
   border-radius: 30px;
   border: 3px solid #dbdbdb;
   width: 400px;
   height: 50px;
   font-size: 30px;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.eventAddBoxBodyRow-input2 {
+.eventDetailBoxBody-input2 {
   border-radius: 30px;
   border: 3px solid #dbdbdb;
   margin-left: 10px;
   width: 270px;
   height: 50px;
-
   margin-left: 10px;
   font-size: 30px;
 }
-.eventAddBoxBodyRow-input3 {
+.eventDetailBoxBody-input3 {
   border-radius: 30px;
   border: 3px solid #dbdbdb;
   width: 700px;
@@ -71,25 +73,25 @@ html {
   margin-bottom: 30px;
   resize: none;
 }
-.eventAddBoxBodyRow-icon {
+.eventDetailBoxBody-icon {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 10px;
 }
-.eventAddBox hr {
+.eventDetailBox hr {
   background: #dbdbdb;
   height: 1px;
   border: 0;
   box-sizing: border-box;
 }
 
-.eventAddBoxFooter {
+.eventDetailBoxFooter {
   display: flex;
   justify-content: flex-end;
 }
 
-.eventAddBoxFooter > div {
+.eventDetailBoxFooter > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,25 +101,25 @@ html {
   margin-left: 20px;
 }
 
-.eventAddBoxFooter > div > img {
+.eventDetailBoxFooter > div > img {
   width: 30px;
   height: 30px;
   margin-right: 30px;
 }
 
-.eventAddBoxFooter > div > .click {
+.eventDetailBoxFooter > div > .click {
   position: absolute;
   margin-right: 30px;
   margin-top: 30px;
 }
-.eventAddBoxFooter-icon:hover {
+.eventDetailBoxFooter-icon:hover {
   opacity: 0.7;
   cursor: pointer;
 }
-.eventAddBoxFooter-button {
-  width: 100px;
-  height: 50px;
-  margin-top: 5%;
+.eventDetailBoxFooter-button {
+  width: 150px;
+  height: 70px;
+  margin-top: 20%;
   border-radius: 20px;
   background-color: #c5ffab;
   font-family: Inter;

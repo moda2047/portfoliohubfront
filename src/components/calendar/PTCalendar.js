@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import CalendarCell from "./CalendarCell";
 import "../css/PTCalendar.css";
 import axios from "axios";
+import $ from "jquery";
+import {} from "jquery.cookie";
 
-const PTCalendar = ({ maindate, getclick }) => {
+const PTCalendar = ({ maindate, getclick, enterEvent, setEnterEvent }) => {
   const [currentDate, setCurrentDate] = useState(maindate);
   const [event, setEvent] = useState();
+
   //처음날짜
   const getFirstDayOfMonth = (date) => {
     return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
@@ -35,7 +38,8 @@ const PTCalendar = ({ maindate, getclick }) => {
     const clickedDate = new Date(
       currentDate.getFullYear(),
       currentDate.getMonth(),
-      day
+      day,
+      9
     );
     getclick(clickedDate);
   };
@@ -44,22 +48,21 @@ const PTCalendar = ({ maindate, getclick }) => {
       currentDate.getMonth() + 1
     }`;
     const headers = {
-      headers: {
-        // Authorization: cookies.token,
-        ContentType: "application/json",
-        Accept: "application/json",
-      },
+      Authorization: $.cookie("cookie"),
+      ContentType: "application/json",
+      Accept: "application/json",
     };
-    console.log("fetchData 함수가 실행됩니다.");
-
+    console.log(`${currentDate.getMonth() + 1}`);
     axios
       .get(url, { headers: headers })
       .then((response) => {
         console.log("API 응답 데이터: ", response.data);
         if (response.data.result) {
-          console.log(response.data.data);
+          console.log(response.data);
           setEvent(response.data.data);
           console.log("성공적으로 됐");
+          console.log(event);
+          console.log($.cookie("cookie"));
         } else {
           console.log("실패");
         }
@@ -71,7 +74,8 @@ const PTCalendar = ({ maindate, getclick }) => {
 
   useEffect(() => {
     getEvent();
-  }, [currentDate]);
+    setEnterEvent(false);
+  }, [currentDate, enterEvent]);
 
   const generateCalendarCells = () => {
     const firstDayOfMonth = getFirstDayOfMonth(currentDate);
@@ -132,13 +136,13 @@ const PTCalendar = ({ maindate, getclick }) => {
           onClick={goToPreviousMonth}
           className="moveimghover"
         ></img>
-
-        <h2>
+        <span className="headerCSpan">
           {currentDate.toLocaleString("default", {
             month: "long",
             year: "numeric",
           })}
-        </h2>
+        </span>
+
         <img
           src="./images/Forward.png"
           alt="forward"

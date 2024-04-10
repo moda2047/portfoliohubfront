@@ -5,7 +5,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import $ from "jquery";
+import {} from "jquery.cookie";
 const EventAdd = () => {
   const navigate = useNavigate();
   // 날짜를 "YYYY-MM-DD" 형식의 문자열로 변환하는 함수
@@ -42,7 +43,7 @@ const EventAdd = () => {
     };
     const url = "http://localhost:8080/event";
     const headers = {
-      userid: "moda",
+      Authorization: $.cookie("cookie"),
       "Content-Type": "application/json",
       Accept: "application/json",
     };
@@ -54,12 +55,15 @@ const EventAdd = () => {
       .then((response) => {
         window.alert("일정이 추가되었습니다.");
         console.log(response.data.message);
-        navigate("/");
+        navigate("/calendarMain");
       })
       .catch((error) => {
         window.alert("일정 추가 중 오류가 발생했습니다.");
         console.error("일정 추가 중 오류가 발생했습니다.", error);
       });
+  };
+  const cancleEventAdd = () => {
+    navigate("/calendarMain");
   };
   return (
     <>
@@ -104,9 +108,8 @@ const EventAdd = () => {
           <textarea
             className="eventAddBoxBodyRow-input3"
             onChange={(e) => setContext(e.target.value)}
-          >
-            초기 텍스트
-          </textarea>
+            placeholder="상세한 설명을 하시오."
+          ></textarea>
         </div>
         <hr />
         <div className="eventAddBoxFooter">
@@ -116,7 +119,12 @@ const EventAdd = () => {
             </button>
           </div>
           <div className="eventAddBoxFooter-icon">
-            <button className="eventAddBoxFooter-button">취소</button>
+            <button
+              className="eventAddBoxFooter-button"
+              onClick={cancleEventAdd}
+            >
+              취소
+            </button>
           </div>
         </div>
       </div>

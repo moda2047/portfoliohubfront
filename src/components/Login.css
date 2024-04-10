@@ -1,0 +1,65 @@
+.loginBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  margin: 0;
+}
+.loginBox {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+}
+
+.login_logo_text {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+}
+.login_logo_text > div {
+  margin-top: -10px;
+  position: relative;
+}
+
+.loginInputBox {
+  text-align: center;
+  margin-top: 20px;
+}
+.loginInputBox > div {
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.loginInputBox > input {
+  border: #dbdbdb 2px solid;
+
+  border-radius: 20px;
+
+  height: 35px;
+
+  width: 300px;
+  padding-left: 10px;
+}
+.loginInputBox > button {
+  background-color: white;
+  border: #c5ffab 6px solid;
+  border-radius: 20px;
+  height: 37px;
+  width: 300px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 15px;
+}
+.loginFind {
+  padding-left: 90px;
+  text-align: center;
+}
+.loginFind > span > a {
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
+}

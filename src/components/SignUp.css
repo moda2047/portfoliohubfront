@@ -1,0 +1,80 @@
+.signUpBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  margin: 0;
+}
+.signUpBox {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+}
+
+.signUp_logo_text {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 30px;
+}
+.signUp_logo_text > span {
+  vertical-align: bottom;
+}
+
+.signUpInBox > div {
+  text-align: center;
+  font-weight: bold;
+}
+
+.signUpInputBox {
+  text-align: center;
+  margin-top: 20px;
+}
+.signUpInputBox > div {
+  text-align: left;
+  margin-left: 80px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.signUpInputBox > div:nth-child(9) {
+  margin-top: 30px;
+}
+.pwInput::placeholder {
+  font-size: 12px;
+}
+
+.signUpInputBox > input {
+  border: #dbdbdb 2px solid;
+  border-radius: 20px;
+  height: 35px;
+  width: 450px;
+  padding-left: 10px;
+}
+.signUpInputBox > input::placeholder {
+  color: #dbdbdb;
+}
+.signUpInputBox > .shortInput {
+  width: 350px;
+}
+
+.signUpInputBox > button {
+  margin-left: 10px;
+  width: 100px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #c5ffab;
+  border-radius: 15px;
+  height: 35px;
+  border: none;
+}
+.signUpBtn {
+  background-color: #c5ffab;
+  text-align: center;
+}
+.signUpInputBox > .bigBtn {
+  width: 200px;
+  margin-top: 30px;
+  font-size: 15px;
+}

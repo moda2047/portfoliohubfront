@@ -1,0 +1,54 @@
+
+.headerBody{
+    display: flex;
+    justify-content:  space-between;
+    align-items:center;
+    height: center;
+    height: 90px;
+    border-bottom: 1px solid #DBDBDB; 
+    background-color: white;
+}
+.headerLeft{
+    cursor: pointer;
+    margin-left: 70px;
+
+}
+nav{
+    margin-top: 16px;
+}
+.headerRight{
+    margin-right: 50px;
+    font-size: 13px;
+    color: #6C6B6B;
+}
+ul{
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+li+li{
+    margin-left: 40px;
+}
+.headerRight>span>a{
+    color: #6C6B6B; 
+    text-decoration: none;
+}
+.headerRight>span{
+    color: #6C6B6B; 
+    text-decoration: none;
+}
+nav>ul>li:hover {
+    color: #C5FFAB;
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+  }
+  
+  .headerRight span > a:hover {
+    color: #C5FFAB;
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+  }
+  .headerRight span:hover {
+    color: #C5FFAB;
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+  }
+

@@ -3,13 +3,14 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  margin-top: 10px;
 }
 .calendar-main {
   /*  background-color: red; */
 }
 
 .calendar-header {
-  background-color: white;
+  background-color: red;
   height: 100px;
   align-items: center;
 }
@@ -19,5 +20,4 @@
 .calendar-event {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
